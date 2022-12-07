@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="App.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="paket.references" />
+  </ItemGroup>
+  
+  <!-- <ItemGroup>
+    <PackageReference Include="Fable.Browser.Dom" Version="2.2.0" />
+    <PackageReference Include="Fable.Core" Version="3.2.3" />
+  </ItemGroup> -->
+
+  <!-- Add source files to package -->
+  <ItemGroup>
+    <!-- <Content Include="*.fsproj; *.fs" PackagePath="fable\" /> -->
+    <!--<Content Include="src\" PackagePath="fable\src\" />-->
+  </ItemGroup>
+  
+  <Import Project="..\.paket\Paket.Restore.targets" />
+</Project>
