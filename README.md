@@ -7,6 +7,36 @@ From repo root:
 - `dotnet paket install`
 - `npm start` or `dotnet fable src --noCache`
 
+The error output:
+
+```
+> dotnet fable src --noCache
+Fable: F# to JS compiler 3.7.20
+Thanks to the contributor! @Neftedollar
+Stand with Ukraine! https://standwithukraine.com.ua/
+
+Parsing src\App.fsproj...
+src> cmd /C dotnet restore App.fsproj -p:FABLE_COMPILER=true
+  Determining projects to restore...
+  Paket version 7.2.0+bb14ab674b2748070a624f394cd6796e11aaffa8
+  The last full restore is still up to date. Nothing left to do.
+  Total time taken: 0 milliseconds
+  Paket version 7.2.0+bb14ab674b2748070a624f394cd6796e11aaffa8
+  Restoring C:\Repos\minimal-fable\src\App.fsproj
+  Starting restore process.
+  Total time taken: 0 milliseconds
+  Restored C:\Repos\minimal-fable\src\App.fsproj (in 257 ms).
+Project and references (1 source files) parsed in 7401ms
+
+Started Fable compilation...
+Fable compilation finished in 1993ms
+
+.\src\App.fs(5,6): (5,13) error FSHARP: The namespace or module 'Browser' is not defined. (code 39)
+.\src\App.fs(11,16): (11,24) error FSHARP: The value, namespace, type or module 'document' is not defined. (code 39)
+.\src\App.fs(11,57): (11,64) error FSHARP: The namespace or module 'Browser' is not defined. (code 39)
+.\src\App.fs(14,1): (14,17) error FSHARP: Lookup on object of indeterminate type based on information prior to this program point. A type annotation may be needed prior to this program point to constrain the type of the object. This may allow the lookup to be resolved. (code 72)
+Compilation failed
+```
 
 # Fable Minimal App
 
