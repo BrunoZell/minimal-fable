@@ -3,7 +3,8 @@
 From repo root:
 
 - `npm install`
-- `paket install`
+- `dotnet tool restore`
+- `dotnet paket install`
 - `npm start` or `dotnet fable src --noCache`
 
 
